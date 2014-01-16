@@ -71,7 +71,6 @@
 #define buttonPin   4          // the number of the pushbutton pin
 #define PWR_EN   7
 #define PWR_OK   2
-#define irPin   8
 #define LED_R   5
 #define LED_G  6
 #define LED_B  3
@@ -135,7 +134,7 @@ void setup()
    //wdt_disable();
    // initialize the serial communications:
   Serial.begin(9600);
-  Serial.println("Fairywren v0.1");   
+  Serial.println("Fairywren v1.0");   
   Serial.println ("Arduino Hardware Expansion Slave.") ;
   for (int pin = 8 ; pin < 11 ; ++pin)
   {
@@ -153,9 +152,6 @@ void setup()
   pinMode(PWR_EN, OUTPUT);
   digitalWrite(PWR_EN, LOW);
   pinMode(buttonPin, INPUT_PULLUP);
-  //pinMode(buttonPin, INPUT);
-  pinMode(irPin,INPUT); 
-  //digitalWrite(LEDPin, HIGH);
    
   
   power_state = false;  
